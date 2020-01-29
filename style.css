@@ -31,20 +31,24 @@ header{
     width:100%;
     justify-self: stretch;
     text-align: center;
-    outline: none;
+    box-sizing: border-box;
     transition: .2s , opacity 1s;
 }
 
 .container label :hover {
-    background-color: dimgray;
+     background-color: dimgray;
+     color: aliceblue;
+ }
+
+.container label :active {
+    box-sizing: border-box;
+    background-color: #343434;
     color: aliceblue;
 }
 
-input:checked + label{
-    background-color: olive;
-    border-bottom: 50px solid olivedrab;
+input:checked+label p{
+    box-shadow:inset 0px 0px 28px -4px #272727;
 }
-
 
 input{
     display: none;
