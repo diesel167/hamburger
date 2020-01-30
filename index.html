@@ -8,47 +8,74 @@
 </head>
 <body>
     <header>
+        <div class="mobile-header">
+            <div class="ham-icon">
+                &#9776
+            </div>
+        </div>
         <div class="container">
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element1" name="menu">
                 <label for="element1">
-                    <p class="nav-item">Элемент1</p>
+                    <p>Элемент1</p>
                 </label>
             </div>
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element2" name="menu">
                 <label for="element2">
-                    <p class="nav-item">Элемент2</p>
+                    <p>Элемент2</p>
                 </label>
+                <div class="submenu element2">
+                    <ul class="sub">
+                        <li><a href="">Элемент2.1</a></li>
+                        <li><a href="">Элемент2.2</a>
+                            <ul>
+                                <li><a href="">Элемент2.2.1</a></li>
+                                <li><a href="">Элемент2.2.2</a></li>
+                                <li><a href="">Элемент2.2.3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Элемент2.3</a></li>
+                        <li><a href="">Элемент2.4</a></li>
+                        <li><a href="">Элемент2.5</a></li>
+                        <li><a href="">Элемент2.6</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element3" name="menu">
                 <label for="element3">
-                    <p class="nav-item">Элемент3</p>
+                    <p>Элемент3</p>
                 </label>
             </div>
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element4" name="menu">
                 <label for="element4">
-                    <p class="nav-item">Элемент4</p>
+                    <p>Элемент4</p>
                 </label>
+                <div class="submenu element4">
+                    <ul class="sub">
+                        <li><a href="">Элемент4.1</a></li>
+                        <li><a href="">Элемент4.2</a>
+                    </ul>
+                </div>
             </div>
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element5" name="menu">
                 <label for="element5">
-                    <p class="nav-item">Элемент5</p>
+                    <p>Элемент5</p>
                 </label>
             </div>
-            <div>
+            <div class="nav-item">
                 <input type="radio" id="element6" name="menu">
                 <label for="element6">
-                    <p class="nav-item">Элемент6</p>
+                    <p>Элемент6</p>
                 </label>
             </div>
             <div class="menu-mobile"><a href="" class="btn-menu"></a></div>
         </div>
     </header>
-    <div id="abc">abcwggwrg</div>
+    <div id="hider"></div>
     <div id="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -80,6 +107,7 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
+
 </body>
 
 </html>
