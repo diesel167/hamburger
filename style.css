@@ -9,6 +9,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 a{
     text-decoration: none;
@@ -57,7 +58,7 @@ header{
     position: absolute;
     top: 80px;
     left: 10%;
-    background-color: aliceblue;
+    background-color: rgba(255, 234, 36, 0.68);
     width: 80%;
     box-shadow: 0 9px 32px -9px #272727;
     z-index: 50;
@@ -71,8 +72,6 @@ header{
 
 
 ul.sub{
-    margin-top: 20px;
-    margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     padding: 0;
@@ -84,7 +83,7 @@ ul.sub{
 .sub li{
     padding: 0;
     display: inline-block;
-    line-height: 30px !important;
+    line-height: 60px !important;
 }
 
 .sub a:hover{
@@ -133,25 +132,27 @@ input{
 .mobile-header{
     display: none;
     box-sizing: border-box;
-    padding-top: 10px;
     background: linear-gradient(#ffea24, #d3b050);
     width: 100%;
     height: 80px;
+    padding-top: 25px;
+
 }
 .ham-icon{
-    color: #e2ddc6;
+    color: white;
     font-size: 2rem;
-    margin-left: auto;
-    margin-right: 10px;
-    width: 60px;
-    height: 60px;
-    padding-top: 5px;
+    margin: 0 25px 0 auto;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    transition: .5s , opacity 1s;
 }
 .ham-icon:hover{
     cursor: pointer;
     color: white;
     transition: .5s , opacity 5s;
 }
+
 
 .ham-icon div{
     width: 100%;
@@ -161,6 +162,19 @@ input{
     border-radius: 5px;
 }
 
+.fade{
+    opacity: 0;
+    animation: fade ease-in 3s;
+}
+
+@keyframes fade{
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+}
 
 @media screen and (max-width:1024px){
     .container{
@@ -169,7 +183,28 @@ input{
         grid-template-rows: 6fr;
         justify-content: left;
         margin: 0;
+        transition:  2s ease-in-out ;
     }
+
+    .submenu{
+        position: relative;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        padding-left: 70px;
+    }
+    ul.sub{
+        grid-template-columns: 1fr;
+    }
+    .sub li ul a{
+        font-size: 0.9rem;
+        position: relative;
+        left: 25px;
+    }
+    .sub ul, a {
+        font-size: 1rem;
+    }
+
     .nav-item{
         text-align: left;
     }
