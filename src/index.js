@@ -2,6 +2,8 @@ window.onload = function(){
   let container = document.getElementsByClassName('container')[0];
   let hider = document.getElementById('hider');
   let content = document.getElementById('content');
+  let inputs = document.getElementsByName('menu');
+  let lastOpened = null;
 
   //add darken wrapper
   container.childNodes.forEach(node=>{
@@ -47,6 +49,61 @@ window.onload = function(){
     }
 
   }
+
   //add icon for menu items with sublists
+  function expand(item){
+    item = [...item];
+    item.map((node,i)=>{
+      if(node.children.length>2){
+        let expander = document.createElement('i');
+        expander.className = 'expander';
+        expander.id = `st${i}`;
+        expander.onclick = function(){
+          console.log(this.parentNode!==lastOpened);
+          if(this.parentNode!==lastOpened){
+            if(lastOpened){
+              lastOpened.querySelector('.submenu').style.display = 'none';
+              lastOpened.querySelector('i').style.transform = 'rotate(45deg)';
+              this.parentNode.querySelector('.submenu').style.display = 'block';
+              expander.style.transform = 'rotate(225deg)';
+            }
+            else{
+              this.parentNode.querySelector('.submenu').style.display = 'block';
+              expander.style.transform = 'rotate(225deg)';
+            }
+            lastOpened = this.parentNode;
+          }
+          else{
+            if(this.parentNode.querySelector('.submenu').style.display === 'none'){
+              this.parentNode.querySelector('.submenu').style.display = 'block';
+              expander.style.transform = 'rotate(225deg)';
+            }
+            else{
+              this.parentNode.querySelector('.submenu').style.display = 'none';
+              expander.style.transform = 'rotate(45deg)';
+            }
+
+          }
+        };
+        node.appendChild(expander);
+        //expander = document.createElement('i');
+        //expander.className = 'expander';
+        //node.children[2].appendChild(expander);
+      }
+    })
+  }
+
+  /*inputs.forEach(input=>{
+    input.onchange = function(){
+      if(input.checked === true){
+        input.parentNode.color = "white";
+      }
+    }
+  });*/
+
+
+
+
+  expand(document.getElementsByClassName('nav-item'));
 };
 
