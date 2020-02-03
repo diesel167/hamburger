@@ -11,10 +11,12 @@
     user-select: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+
 a{
     text-decoration: none;
     padding: 3px;
 }
+
 header{
     position: relative;
     background: linear-gradient(#ffea24, #d3b050);
@@ -62,14 +64,11 @@ header{
     width: 80%;
     box-shadow: 0 9px 32px -9px #272727;
     z-index: 50;
-
 }
 
 .nav-item:hover .submenu{
     display: block;
 }
-
-
 
 ul.sub{
     display: grid;
@@ -77,8 +76,6 @@ ul.sub{
     padding: 0;
     list-style-type: none;
 }
-
-
 
 .sub li{
     padding: 0;
@@ -105,21 +102,20 @@ ul.sub{
     position: relative;
     left: -12px;
 }
+
 .sub li ul li{
     display: block;
 }
-
 
 input{
     display: none;
 }
 
-
-
 #content{
     z-index: 1;
     padding: 10px;
 }
+
 #hider {
     display: none;
     background-color: rgba(0,0,0,.3);
@@ -130,6 +126,7 @@ input{
     left: 0;
     z-index: -1;
 }
+
 .mobile-header{
     display: none;
     box-sizing: border-box;
@@ -139,6 +136,7 @@ input{
     padding-top: 25px;
 
 }
+
 .ham-icon{
     color: white;
     font-size: 2rem;
@@ -148,12 +146,12 @@ input{
     line-height: 30px;
     transition: .5s , opacity 1s;
 }
+
 .ham-icon:hover{
     cursor: pointer;
     color: white;
     transition: .5s , opacity 5s;
 }
-
 
 .ham-icon div{
     width: 100%;
@@ -167,7 +165,6 @@ input{
     display: none;
     position: absolute;
     right: 40px;
-    /*float: right;*/
     width: 20px;
     height: 20px;
     margin-right: 20px;
@@ -216,15 +213,18 @@ input{
         left: 0;
         padding-left: 70px;
     }
+
     ul.sub{
         grid-template-columns: 1fr;
     }
+
     .sub li ul a{
         font-size: 0.9rem;
         position: relative;
         left: 5%;
         width: 95%;
     }
+
     .sub ul, a {
         font-size: 1rem;
     }
@@ -232,21 +232,41 @@ input{
     .nav-item{
         text-align: left;
     }
+
     .nav-item label p{
         padding-left: 5%;
     }
+
     .mobile-header {
         display: block;
     }
+
     .expander {
         display: inline;
     }
+
     .nav-item:hover .submenu{
         display: none;
     }
+
     .sub a:hover{
         color: rgba(233, 117, 76, 0.83);
         font-weight: bold;
         transition: .2s , opacity 1s;
+    }
+
+    .sub li ul{
+        display: none;
+    }
+
+    .container label :hover{
+        background-color: transparent;
+        color: dimgray;
+        transition: none;
+    }
+    .container label :active {
+        transition: none;
+        background-color: transparent;
+        color: dimgray;
     }
 }
