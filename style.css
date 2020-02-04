@@ -144,13 +144,13 @@ input{
     width: 30px;
     height: 30px;
     line-height: 30px;
-    transition: .5s , opacity 1s;
+    transition: .5s ease-in;
 }
 
 .ham-icon:hover{
     cursor: pointer;
     color: white;
-    transition: .5s , opacity 5s;
+    transition: .5s ease-in;
 }
 
 .ham-icon div{
@@ -191,19 +191,6 @@ input{
     right: 13px;
 }
 
-.fade{
-    opacity: 0;
-    animation: fade ease-in 3s;
-}
-
-@keyframes fade{
-    20%{
-        opacity: 1;
-    }
-    80%{
-        opacity: 1;
-    }
-}
 
 @media screen and (max-width:1024px){
     .container{

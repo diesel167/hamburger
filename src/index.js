@@ -18,24 +18,16 @@ window.onload = function(){
 
   });
 
-  //add click handler for hamburger and add some animation with class-helper 'fade'
+  //add click handler for hamburger
   document.getElementsByClassName('ham-icon')[0].onclick = function(){
      if(container.style.display==='grid'){
       hider.style.display='none';
-      container.classList.add('fade');
       container.style.display = 'none';
-      setTimeout(()=>{
-        container.classList.remove('fade');
-      },2000);
       this.innerHTML='&#9776';
     }
     else{
       hider.style.display='block';
-      container.classList.add('fade');
       container.style.display = 'grid';
-      setTimeout(()=>{
-        container.classList.remove('fade');
-      },2000);
       this.innerHTML='&#10006';
     }
 
