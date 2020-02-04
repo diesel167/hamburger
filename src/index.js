@@ -18,7 +18,7 @@ window.onload = function(){
 
   });
 
-  //click handler for hamburger and add some animation with class-helper 'fade'
+  //add click handler for hamburger and add some animation with class-helper 'fade'
   document.getElementsByClassName('ham-icon')[0].onclick = function(){
      if(container.style.display==='grid'){
       hider.style.display='none';
@@ -27,12 +27,7 @@ window.onload = function(){
       setTimeout(()=>{
         container.classList.remove('fade');
       },2000);
-      this.classList.add('fade');
       this.innerHTML='&#9776';
-      setTimeout(()=>{
-        this.classList.remove('fade');
-      },2000);
-
     }
     else{
       hider.style.display='block';
@@ -41,14 +36,7 @@ window.onload = function(){
       setTimeout(()=>{
         container.classList.remove('fade');
       },2000);
-
-
-      this.classList.add('fade');
       this.innerHTML='&#10006';
-      setTimeout(()=>{
-        this.classList.remove('fade');
-      },2000);
-
     }
 
   }
