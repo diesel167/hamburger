@@ -161,6 +161,7 @@ input{
     border-radius: 5px;
 }
 
+
 .expander{
     display: none;
     position: absolute;
@@ -180,6 +181,14 @@ input{
 .expander:hover{
     border-width: 0 6px 6px 0;
     cursor: pointer;
+}
+
+.expander-helper{
+    width: 335%;
+    height: 328%;
+    position: relative;
+    top: -14px;
+    right: 13px;
 }
 
 .fade{

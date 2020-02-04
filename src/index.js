@@ -61,6 +61,9 @@ window.onload = function(){
     item.map((node,i)=>{
       if(node.children.length>nch){
         let expander = document.createElement('i');
+        let expanderhelp = document.createElement('div');
+        expanderhelp.className = 'expander-helper';
+        expander.appendChild(expanderhelp);
         expander.className = 'expander';
         expander.id = `st${i}`;
         //if main submenus
@@ -85,12 +88,18 @@ window.onload = function(){
                 expander.style.transform = 'rotate(225deg)';
               }
               else{
+                console.log(this.parentNode);
                 this.parentNode.querySelector('.submenu').style.display = 'none';
                 expander.style.transform = 'rotate(45deg)';
+                //reset second floor uls
+                [...this.parentNode.querySelectorAll('.submenu ul li ul')].map(ul=>{
+                  ul.style.display = 'none';
+                });
+                [...this.parentNode.querySelectorAll('.submenu ul li i')].map(i=>{
+                  i.style.transform = 'rotate(45deg)';
+                });
               }
-
             }
-
           };
         }
         //if second floor submenus
